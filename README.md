@@ -351,4 +351,163 @@ case $fruit in
        
 esac
 
+#loops
+
+Loops are used to repeat a set of commands multiple times, making your scripts powerful and efficient.
+
+> types of loops
+
+Loop type     Description
+
+for	        Repeat over a list or range
+
+while       	Repeat while a condition is true
+
+until	        Repeat until a condition becomes true
+
+> for loop
+
+A for loop is best when you know how many times you want to repeat something or have a list to go through.
+
+ > Syntax:
+
+for variable in list
+
+do
+
+    commands
+  
+done
+
+> Example:
+
+for fruit in apple banana cherry
+
+do
+
+    echo "I like $fruit"
+  
+done
+
+Output: I like apple I like banana I like cherry
+
+> while loop
+
+ Theory:
+ 
+A while loop is used when the condition needs to be checked before each iteration.
+
+>  Syntax:
+
+while [ condition ]
+
+do
+
+    commands
+  
+done
+
+>  Example:
+
+count=1
+
+while [ $count -le 3 ]
+
+do
+
+      echo "Count is $count"
+  
+      ((count++))
+  
+done
+
+> until loop
+
+Theory:
+
+An until loop runs until the condition becomes true — almost like the opposite of while.
+
+>  Syntax:
+
+until [ condition ]
+
+do
+
+    commands
+  
+done
+
+> Example:
+
+count=1
+
+until [ $count -gt 3 ]
+
+do
+
+    echo "Count is $count"
+  
+    ((count++))
+  
+done 
+
+# controlling loops
+
+ > break – Exit the loop early
+
+for i in {1..5}
+
+do
+
+     if [ $i -eq 3 ]; then
+  
+        break
+    
+     fi
+  
+     echo "i is $i"
+  
+done
+
+Stops when i becomes 3
+
+> continue-Skip current iteration
+
+for i in {1..5}
+
+do
+
+     if [ $i -eq 3 ]; then
+  
+       continue
+    
+   fi
+  
+   echo "i is $i"
+  
+done
+
+Skips printing 3
+
+> Concept	Explanation
+
+for -	Repeats over a list or range
+
+while	 - Runs while condition is true
+
+until  -	Runs until condition becomes true
+
+break  -	Exits the loop early
+
+continue - 	Skips one iteration and continues
+
+
+
+
+
+
+
+
+
+
 
